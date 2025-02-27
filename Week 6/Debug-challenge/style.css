@@ -28,5 +28,13 @@ p {
 img {
   width: 100%;
   height: auto;
+  transition: width 2s, height 2s, transform 2s;
 }
+
+img:hover {
+  width: 0%;
+  height: 0%;
+  transform: rotate(360deg);
+}
+
 
