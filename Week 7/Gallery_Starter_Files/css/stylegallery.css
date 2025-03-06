@@ -32,3 +32,7 @@ body {
     text-align: center;
     color: #ff0000;
   }
+
+  .hover-2D:hover {
+    transform: rotate(20deg);
+  }
