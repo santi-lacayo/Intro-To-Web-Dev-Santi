@@ -56,3 +56,14 @@ body {
 .column img:hover {
     color: aqua;
 }
+
+.infobox {
+    padding: 80px; 
+    margin: 8px;
+    background-color: rgb(53, 64, 36);
+    color: antiquewhite;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: ;
+
+}
