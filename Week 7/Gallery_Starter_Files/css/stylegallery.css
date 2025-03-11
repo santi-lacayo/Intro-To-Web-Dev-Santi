@@ -14,6 +14,10 @@ body {
     position: relative;
 }
 
+.polaroid:hover{
+    transform: rotate(30deg);
+}
+
 .polaroid img {
    width: 100%;
    height: auto;
@@ -33,6 +37,31 @@ body {
     color: #ff0000;
   }
 
-  .hover-2D:hover {
-    transform: rotate(20deg);
+  .brooklyn-hover {
+    width: 500px;
+    transition: width 5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .brooklyn-hover:hover {
+    width: 200px;
+  }
+
+  .FDNY-hover {
+    transition: opacity 10s;
+  }
+
+  .FDNY-hover:hover {
+    opacity: -1.0;
+  }
+
+  @keyframes jump {
+    0% {transform: scale(1.0);}
+    50%{transform:scale(1.5);}
+    100%{transform: scale(1.0);}
+  }
+
+  .skating-hover:hover {
+    animation-name: jump;
+    animation-duration: 5s;
   }
