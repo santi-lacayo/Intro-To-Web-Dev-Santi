@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Hello JavaScript</title>
+    <style>
+        body{
+            background-color: crimson;
+        }
+        button{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 2px solid rgb(200, 185, 166);
+            box-shadow: 5px 5px 2px;
+        }
+        .center {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <button type="button">Player 1: Unknown</button>
+    </div>
+    <script>
+        function updateName(){
+            const name = prompt("Enter a new name");
+            button.textContent = `Player 1: ${name}`;
+        }
+        const button = document.querySelector("button");
+button.addEventListener("click", updateName);
+    </script>
+</body>
