@@ -15,13 +15,34 @@ h1 {
     src: url(./cinzel/cinzel-regular.otf);
 }
 
+.header1 {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    z-index: 10; 
+}
+
 .title1 {
     text-align: center;
-    background-color: antiquewhite;
     position: fixed;
     width: 100%;
     top: 0px;
 }
+
+.logo {
+    position: absolute;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -31,12 +52,14 @@ h1 {
     word-spacing: 50px;
     box-sizing: border-box;
     top: 80px;
+    z-index: 10;
 }
 
 .navbar a {
     display: inline-block;
     color: antiquewhite;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .navbar :hover {
@@ -121,6 +144,11 @@ h1 {
     align-content: center;
   }
 
+  .container1 p {
+    font-family: 'Raleway';
+    font-weight: 100;
+  }
+
   /*css for About us*/
 
   .about {
@@ -136,29 +164,99 @@ h1 {
     min-width: fit-content;
   }
 
+  .about p {
+    font-family: 'Raleway';
+    font-weight: 100;
+  }
+
   /*css for Dining*/
 
-  .food-text h3 {
+  .food-text h2 {
     margin-top: 150px;
     color: black;
     text-align: center;
   }
 
   .food {
-    transition: transform 3s;
     background-color: #332c0f;
-    transition-timing-function: ease-in-out;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 180px;
+    justify-content: center;
+    align-items: center;
+    
   }
 
-  .food-hover {
-    transition: transform 3s, opacity 3s;
+  .food-transition {
+    margin-top: 150px;
+   
+    width: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
-  .food-hover:hover {
-    transform: rotate(360deg);
+  .food-transition img{
+    transition: transform 3s, opacity 3s;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hidden {
     opacity: 0;
   }
+
+  .spin {
+   transform: rotate(360deg); 
+  }
+  
+  .restaurant-style {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 35px;
+  }
+
+  .restaurant-style img{
+    width: 100%;
+    display: block;
+  }
+
+  /*css for Experiences*/
+
+  .slideshow-container {
+    display: flex;
+    margin-top: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  .slideshow {
+    width: 300px;
+  }
+
+.button{
+    font-size: 30px;
+    background-color: #332c0f;
+    color: antiquewhite;
+    border-radius: 30px;
+}
+  .display-left {
+    transform: translate(-365px);
+  }
+
+  .display-right {
+    transform: translate(10px);
+
+  }
+
+
 
 
