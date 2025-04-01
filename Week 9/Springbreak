@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Springbreak Thoughts</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Explore what happend during springbreak in Val d'Isère</h1>
+        <div class="container-1">
+        <div class="boxes" onclick="showText('text-1')">
+            <p>Day 1</p> 
+            <div id="text-1"class="text-hidden">
+                <p>The first day was crazy, we almost got kidnapped</p>
+            </div>
+        </div>
+        <div class="boxes" onclick="showText('text-2')">
+            <p>Day 2</p>
+            <div id="text-2"class="text-hidden">
+                <p>Going from Geneva to Val d'Isère long car ride but fun</p>
+            </div>   
+        </div>
+        <div class="boxes" onclick="showText('text-3')">
+            <p>Day 3</p>
+            <div id="text-3"class="text-hidden">
+                <p>First day snowboarding, perfect day but one of my friends broke her arm</p>
+            </div>   
+        </div> 
+        <div class="boxes" onclick="showText('text-4')">
+            <p>Day 4</p> 
+            <div id="text-4"class="text-hidden">
+                <p>Nothing crazy happened, skiing and touristing around the village</p>
+            </div>  
+        </div> 
+        <div class="boxes" onclick="showText('text-5')">
+            <p>Day 5</p> 
+            <div id="text-5"class="text-hidden">
+                <p>La Folie Douce is all I can say, it was wild</p>
+            </div>  
+        </div> 
+        <div class="boxes" onclick="showText('text-6')">
+            <p>Day 6</p> 
+            <div id="text-6"class="text-hidden">
+                <p>Getting better at the snowpark, and fun dinner at Le Piaf</p>
+            </div>  
+        </div>
+        <div class="boxes" onclick="showText('text-7')">
+            <p>Day 7</p> 
+            <div id="text-7"class="text-hidden">
+                <p>Last day in the mountain, achieved my goal of jumping, last dinner with everyone</p>
+            </div>  
+        </div> 
+        <div class="boxes" onclick="showText('text-8')">
+            <p>Day 8</p>
+            <div id="text-8"class="text-hidden">
+                <p>Long flight back to New York, a little depressing</p>
+            </div>   
+        </div> 
+        <div class="boxes" onclick="showText('text-9')">
+            <p>Day 9</p>
+            <div id="text-9"class="text-hidden">
+                <p>Not sad anymore because it was a very warm day in the city!</p>
+            </div>   
+        </div> 
+        </div>
+    <script src="js.js"></script>
+    </body>
+</html>
