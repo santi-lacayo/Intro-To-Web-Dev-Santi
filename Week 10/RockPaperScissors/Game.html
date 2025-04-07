@@ -11,31 +11,50 @@
         <button id="Rock">Rock</button>
         <button id="Paper">Paper</button>
         <button id="Scissors">Scissors</button>
-        <p class="tie"></p>
+        <p id="tie"></p>
+        <div id="result"></div>
         <script>
-            gameChoices = ["Rock", "Paper", "Scissors"]
-            const Result = ;
-            const resetButton = ;
-            const userGuess = ;
-            function randomChoices(gameChoices){
+            const gameChoices = ["Rock", "Paper", "Scissors"]
+            const resultDisplay = document.getElementById("result");
+            const tieMessage = document.getElementById("tie");
+
+        document
+        .getElementById("Rock")
+        .addEventListener("click", () => randomChoices("Rock"));
+        document
+        .getElementById("Paper")
+        .addEventListener("click", () => randomChoices("Paper"));
+        document
+        .getElementById("Scissors")
+        .addEventListener("click", () => randomChoices("Scissors"));
+
+            function randomChoices(userChoice){
                 const randomIndex = Math.floor(Math.random() * gameChoices.length);
                 let computerAnswer = gameChoices [randomIndex];
+                checkGuess(computerAnswer, userChoice);
             }
-            checkGuess(){
+
+            function checkGuess(computerAnswer, userGuess) {
+                resultDisplay.innerHTML = `You chose: ${userGuess}<br>Computer chose: ${computerAnswer}<br>`;
+
             if(computerAnswer === userGuess){
-                tie.textcontent = "It's a tie, select another option";
-            } else if(computerAnswer != userGuess) {
-                if(computerAnswer == "Rock" && userGuess == "Scissors"){
-
-                }else if(computerAnswer == "Scissors" && userGuess == "Paper"){
-
-                }else(computerAnswer == "Paper" && userGuess == "Rock")
-
+                tieMessage.textContent = "It's a tie, select another option";
+            } 
+            else {
+                tieMessage.textContent="";
+                if(
+                (computerAnswer === "Rock" && userGuess === "Scissors")||
+                (computerAnswer === "Scissors" && userGuess === "Paper")||
+                (computerAnswer === "Paper" && userGuess === "Rock")
+            ){
+                resultDisplay.innerHTML += "<strong>Computer wins!</strong>";
+            }
+            else {
+                resultDisplay.innerHTML += "<strong>You win!</strong>";
+            }   
             }
             }
         </script>
 
     </body>
 </html>
-
-
