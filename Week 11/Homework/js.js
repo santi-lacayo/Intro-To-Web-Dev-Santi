@@ -1,0 +1,15 @@
+const favoriteFoods = ["sushi", " pizza", " pasta", " smoothies", " cheesecake"];
+document.getElementById("favoriteFoods").innerHTML = favoriteFoods;
+document.getElementById("favoriteFoodsLength").innerHTML = favoriteFoods.length;
+document.getElementById("favoriteFoodsElement1").innerHTML = favoriteFoods[0];
+favoriteFoods[0] = " nigiri";
+document.getElementById("favoriteFoodsModified").innerHTML = favoriteFoods;
+document.getElementById("favoriteFoodsPasta").innerHTML = favoriteFoods.indexOf(" pasta");
+favoriteFoods.push(" tacos");
+document.getElementById("favoriteFoodsItem").innerHTML = favoriteFoods;
+favoriteFoods.unshift(" steak");
+document.getElementById("favoriteFoodsSteak").innerHTML = favoriteFoods;
+favoriteFoods.pop();
+document.getElementById("favoriteFoodsRemove").innerHTML = favoriteFoods;
+favoriteFoods.shift();
+document.getElementById("favoriteFoodsRemove1").innerHTML = favoriteFoods;

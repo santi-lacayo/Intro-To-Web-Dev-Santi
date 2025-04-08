@@ -57,6 +57,21 @@ function sumValues(a,b) {
 }
 ```
 
+# Loops
+Allow you to keep running parts of your code until a condition is met
+```javascript
+const fruits = ["apples", "bananas", "cherries"];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+A for...of loop gives you a way to get each item in the array and run some JavaScript on it. The line for (const fruit of fruits) says:
+
+    Get the first item in fruits.
+    Set the fruit variable to that item, then run the code between the {} curly braces.
+    Get the next item in fruits, and repeat 2, until you reach the end of fruits.
+
+
 
 
 
