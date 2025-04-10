@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Arrays: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+    
+        <p></p>
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // Add your code here
+    const myArray = ["bad_bunny ", "fredagain " , " shakira"];
+    myArray[0] = " Avicii";
+    myArray[1] = " Maroon_5";
+    myArray.unshift(" M.I.A.")
+    
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    para1.textContent = `Array: ${ myArray }`;
+
+    section.appendChild(para1);
+  </script>
+
+</html>
