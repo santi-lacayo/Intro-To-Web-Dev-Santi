@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loop examples</title>
+    <style>
+   
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <h1>JavaScript Looping Examples</h1>
+
+    <div class="result" id="output1"></div>
+    <div class="result" id="output2"></div>
+    <div class="result" id="output3"></div>
+    <div class="result" id="output4"></div>
+    <div class="result" id="output5"></div>
+    <div class="result" id="output6"></div>
+    <div class="result" id="output7"></div>
+    <div class="result">
+      <h2>Search Contacts</h2>
+      <label for="search">Search by contact name: </label>
+      <input id="search" type="text" />
+      <button>Search</button>
+      <p></p>
+    </div>
+    <div class="result">
+      <h2>Integer Squares Generator</h2>
+      <label for="number">Enter number: </label>
+      <input id="number" type="number" />
+      <button id="squareBtn">Generate integer squares</button>
+      <p id="squareOutput">Output:</p>
+    </div>
+  
+  <script>
+   // 1. for...of example
+   const cats1 = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+      let output1 = "";
+      for (const cat of cats1) {
+        output1 += cat + "<br>";
+      }
+      document.getElementById("output1").innerHTML = `<h2>for...of loop:</h2>${output1}`;
+
+      // 2. map() example (uppercase cats)
+      function toUpper(string) {
+        return string.toUpperCase();
+      }
+      const upperCats = cats1.map(toUpper);
+      document.getElementById("output2").innerHTML = `<h2>map() to uppercase:</h2>${upperCats.join("<br>")}`;
+
+      // 3. filter() example (starts with "L")
+      function lCat(cat) {
+        return cat.startsWith("L");
+      }
+      const filteredCats = cats1.filter(lCat);
+      document.getElementById("output3").innerHTML = `<h2>filter() cats starting with 'L':</h2>${filteredCats.join("<br>")}`;
+
+      // 4. Standard for loop
+      let output4 = "";
+      for (let i = 0; i < cats1.length; i++) {
+        output4 += cats1[i] + "<br>";
+      }
+      document.getElementById("output4").innerHTML = `<h2>Standard for loop:</h2>${output4}`;
+
+      // 5. while loop
+      const cats2 = ["Pete", "Biggles", "Jasmine"];
+      let myFavoriteCats1 = "My cats are called ";
+      let i1 = 0;
+      while (i1 < cats2.length) {
+        if (i1 === cats2.length - 1) {
+          myFavoriteCats1 += `and ${cats2[i1]}.`;
+        } else {
+          myFavoriteCats1 += `${cats2[i1]}, `;
+        }
+        i1++;
+      }
+      document.getElementById("output5").innerHTML = `<h2>while loop:</h2>${myFavoriteCats1}`;
+
+      // 6. do...while loop
+      let myFavoriteCats2 = "My cats are called ";
+      let i2 = 0;
+      do {
+        if (i2 === cats2.length - 1) {
+          myFavoriteCats2 += `and ${cats2[i2]}.`;
+        } else {
+          myFavoriteCats2 += `${cats2[i2]}, `;
+        }
+        i2++;
+      } while (i2 < cats2.length);
+      document.getElementById("output6").innerHTML = `<h2>do...while loop:</h2>${myFavoriteCats2}`;
+
+      // 7. break and continue demo
+      let output7 = "<h2>break and continue:</h2>";
+      for (let i = 0; i < cats1.length; i++) {
+        if (cats1[i] === "Jaguar") continue; // skip Jaguar
+        if (cats1[i] === "Caracal") break; // stop at Caracal
+        output7 += cats1[i] + "<br>";
+      }
+      document.getElementById("output7").innerHTML = output7;
+      // 8. Contact search with for loop
+      const contacts = [
+        "Chris:2232322",
+        "Sarah:3453456",
+        "Bill:7654322",
+        "Mary:9998769",
+        "Dianne:9384975",
+      ];
+      const para = document.querySelector(".result p");
+      const input = document.querySelector("#search");
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", () => {
+        const searchName = input.value.toLowerCase();
+        input.value = "";
+        input.focus();
+        para.textContent = "";
+        for (const contact of contacts) {
+          const splitContact = contact.split(":");
+          if (splitContact[0].toLowerCase() === searchName) {
+            para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+            break;
+          }
+        }
+        if (para.textContent === "") {
+          para.textContent = "Contact not found.";
+        }
+      });
+      // 9. Integer squares generator
+      const squarePara = document.getElementById("squareOutput");
+      const squareInput = document.getElementById("number");
+      const squareBtn = document.getElementById("squareBtn");
+
+      squareBtn.addEventListener("click", () => {
+        squarePara.textContent = "Output: ";
+        const num = squareInput.value;
+        squareInput.value = "";
+        squareInput.focus();
+        for (let i = 1; i <= num; i++) {
+          let sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+          squarePara.textContent += `${i} `;
+        }
+      });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loop exercises</title>
+    <style>
+        html {
+        font-family: sans-serif;
+        }
+
+        h2 {
+        font-size: 16px;
+        }
+
+        .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+        }
+
+        body {
+        margin: 10px;
+        background: #f5f9fa;
+        }
+
+   
+    </style>
+  </head>
+
+  <body>
+    <h2>Launch Countdown</h2>
+    <div class="output"></div>
+
+    <h2>Filling in a guest list</h2>
+    <div class="admitted"></div>
+    <div class="refused"></div>
+
+    
+
+  
+  <script>
+    //countdown
+    const output = document.querySelector('.output');
+    for(let i=10; i>=0; i--){
+        const para = document.createElement('p');
+        if(i===10){
+            para.textContent = `Countdown ${i}`;
+        } else if(i===0){
+            para.textContent = 'Blast off!';  
+        } else{
+            para.textContent = i;
+        }
+        output.appendChild(para);
+        }
+
+    //guestlist
+    const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+    const admitted = document.querySelector('.admitted');
+    const refused = document.querySelector('.refused');
+
+    admitted.textContent = 'Admit: ';
+    refused.textContent = 'Refuse: ';
+
+    for (const person of people) {
+    if (person === 'Phil' || person === 'Lola') {
+        refused.textContent += `${person}, `;
+    } else {
+        admitted.textContent += `${person}, `;
+    }
+    }
+
+    refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+    admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
+  </script>
+ </body>
+</html>
