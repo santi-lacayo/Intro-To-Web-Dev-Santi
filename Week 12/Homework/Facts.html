@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Fact</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #ff3a08;
+        text-align: center;
+        padding: 10px;
+      }
+
+      h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      
+
+      button {
+        background-color: rgb(0, 153, 255);
+        padding: 25px;
+        border-radius: 80px;
+      }
+
+      button:hover {
+        background-color: rgb(0, 112, 187);
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Random Fact Generator</h1>
+    <h3 id="random"></h3>
+    <button id="generate">Click to Show a Random Fact</button>
+
+    <script>
+        async function loadFact() {
+            const res = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random?language=en");
+            const data = await res.json();
+
+          
+            document.getElementById("random").textContent = data.text;
+
+        }
+        document.getElementById("generate").addEventListener("click", loadFact);
+        loadFact();
+        
+    </script>
+  </body>
+</html>
