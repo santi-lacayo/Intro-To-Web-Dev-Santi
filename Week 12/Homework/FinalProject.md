@@ -5,9 +5,13 @@ Make the White Lotus website a ready to launch site, including all the msissing 
 
 ## Inspiration Reference
 https://www.ahshotelassets.com/
+
 https://www.oneandonlyresorts.com/cape-town
+
 https://www.waldhaus-sils.ch/en
+
 https://www.fourseasons.com/tamarindo/
+
 Moodboard: https://pin.it/4kbBBVetH
 
 
