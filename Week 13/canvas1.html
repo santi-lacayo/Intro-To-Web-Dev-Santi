@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas tutorial</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <canvas id="tutorial" width="300" height="150"></canvas>
+    <script>
+  function draw() {
+  const ctx = document.getElementById("tutorial").getContext("2d");
+
+  // Draw background
+  ctx.fillStyle = "rgb(233 163 25)";
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = "rgb(250 213 154)";
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = "rgb(252, 239, 203)";
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = "rgb(255 51 0)";
+  ctx.fillRect(0, 112.5, 150, 37.5);
+
+  // Draw semi transparent rectangles
+  for (let i = 0; i < 10; i++) {
+    ctx.fillStyle = `rgb(255 255 255 / ${(i + 1) / 10})`;
+    for (let j = 0; j < 10; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
+}
+draw()
+    </script>
+  </body>
+</html>
